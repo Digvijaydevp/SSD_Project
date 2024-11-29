@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import TrainingLineGraph from './TrainingLineGraph'; // Adjust the path as needed
+import TrainingLineGraph from './TrainingLineGraph';
 
 
 function App() {
@@ -11,7 +11,6 @@ function App() {
   const [reports, setReports] = useState(null); // Stores report data
   const [activeTab, setActiveTab] = useState("positive");
 
-  // Add this useEffect hook
   useEffect(() => {
     if (reports) {
       console.log("Received Reports:", reports);
@@ -41,7 +40,6 @@ function App() {
     try {
       const response = await fetch("http://127.0.0.1:5000/reports");
 
-      // Check if the response is OK
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -698,7 +696,7 @@ const tableDataStyle = {
   padding: "10px",
   textAlign: "center",
   fontSize: "14px",
-  color: "#495057", // Optionally, you can specify the color for the table data
+  color: "#495057", 
 };
 
 const styles = {
@@ -724,7 +722,7 @@ const styles = {
   analysisOptions: {
     display: "flex",
     justifyContent: "center",
-    gap: "40px", // Increased gap for more space between the buttons
+    gap: "40px", 
     marginTop: "20px",
   },
   title: {
@@ -782,7 +780,7 @@ const styles = {
   },
   resultsContainer: {
     marginTop: "20px",
-    overflowX: "auto", // Allows horizontal scrolling if necessary
+    overflowX: "auto", 
     width: "90%",
     maxWidth: "800px",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
@@ -831,12 +829,12 @@ const styles = {
     textAlign: "left",
   },
   tableRowHover: {
-    backgroundColor: "#f1f1f1", // Hover effect for rows
+    backgroundColor: "#f1f1f1", 
   },
   tableCellSentiment: {
     padding: "10px",
     border: "1px solid #ddd",
-    color: "white", // Default text color (white) for sentiment cell
+    color: "white", 
     fontWeight: "bold",
   },
   positive: {
